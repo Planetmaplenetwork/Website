@@ -313,6 +313,7 @@ nav {
     gap: 2rem;
     width: 100%;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 @media only screen and (max-width: 786px) {
@@ -323,7 +324,6 @@ nav {
         padding-top: 1rem;
     }
     nav {
-        flex-direction: column;
         padding-bottom: 4rem;
     }
 }
@@ -340,6 +340,7 @@ nav a {
     font-weight: bold;
     font-size: 1.2rem;
     text-transform: uppercase;
+    width: 5rem;
 }
 
 nav a:hover {
@@ -384,9 +385,16 @@ img {
     
 }
 
+@media screen and (max-width: 455px) {
+    nav {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+}
+
 @media screen and (max-width: 320px) {
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     button {
